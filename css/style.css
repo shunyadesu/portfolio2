@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+@import url("normalize.css"); /* ------- Reset all CSS Styles */
+
+/********************
+共通
+******************************/
+* {
+  box-sizing: border-box;
+}
+/* https://developer.mozilla.org/ja/docs/Web/CSS/box-sizing */
+
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", sans-serif;
+  background-image: url(../images/img-background.jpg);
+  /* 天地左右の中央に配置 */
+  background-position: center center;
+  /* タイル状に繰り返し表示しない */
+  background-repeat: no-repeat;
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #171a0f;
+}
+
+/* 共通　大枠 */
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  background-color: rgba(23,26,15,0.8);
+}
+
+/* 共通　ヘッダー・メインナビゲーション */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.header-logo {
+  width: 50%;
+}
+.header-logo img {
+  width: 140px;
+  height: auto;
+}
+.header-navigation {
+  width: 50%;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+.header-navigation ul {
+  display: flex;
+  justify-content: space-between;
+}
+.header-navigation ul li {
+  font-size: 14px;
+  font-weight: bold;
+}
+.header-navigation ul li a {
+  text-decoration: none;
+  color: #d1d6c0;
+  transition: 0.3s;
+}
+.header-navigation ul li a:hover {
+  color: #ff0000;
+}
+/* 共通　フッター */
+.footer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
+}
+.footer-navigation {
+  width: 100%;
+}
+.footer-navigation ul {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+.footer-navigation ul li {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 40px;
+}
+.footer-navigation ul li a {
+  text-decoration: none;
+  color: #d1d6c0;
+  transition: 0.3s;
+}
+.footer-navigation ul li a:hover {
+  color: #ff0000;
+}
+.footer-copyright {
+  color: #d1d6c0
+}
+/********************
+index.html
+**************************************************/
+/* index.html　メインビジュアル */
+.main-image {
+  width: 100%;
+}
+.main-image img {
+  width: 100%;
+}
+#slideshow {
+  position: relative;
+  height: 480px;
+}
+#slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  opacity: 0;
+}
+#slideshow img.active {
+  z-index: 10;
+  opacity: 1;
+}
+#slideshow img.last-active {
+  z-index: 9;
+}
+/* index.html イントロテキスト部分 */
+.text-intro {
+  width: 800px;
+  padding: 60px 20px;
+  margin: auto;
+}
+.text-intro p {
+  font-size: 22px;
+  color: #d1d6c0;
+  line-height: 1.75;
+}
+/* index.html バナーエリア */
+.banner-wrapper {
+  width: 100%;
+  margin: 0 auto 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.banner {
+  width: 30%;
+}
+.banner h2 {
+  margin: 5px;
+  font-size: 22px;
+  text-align: center;
+}
+.banner img {
+  width: 100%;
+}
+.banner a img {
+  transition: opacity 0.3s;
+}
+.banner a:hover img {
+  opacity: 0.6;
+}
+.banner a {
+  text-decoration: none;
+  color: #d1d6c0;
+  transition: 0.3s;
+}
+.banner a:hover {
+  color: #ff0000;
+}
+
+/********************
+その他のページ
+**************************************************/
+.content-wrapper {
+  width: 100%;
+  padding: 80px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.content-text {
+  width: 50%;
+}
+.content-text h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #d1d6c0;
+}
+.content-text h3 {
+  margin-top: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #d1d6c0;
+}
+.content-text p {
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: #d1d6c0;
+  line-height: 1.75;
+  text-align: justify;
+}
+.content-img {
+  width: 50%;
+}
+.content-img img {
+  padding: 40px 20px 20px 40px;
+}
